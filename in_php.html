@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IEEE - KAU Female Branch</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: "Cairo", sans-serif;
+            background-color: #011762;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #011762;
+            padding: 20px 0;
+            color: #a4a3a3;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: #a4a3a3;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1E90FF;
+        }
+
+        .navbar {
+            background-color: #011762;
+            padding: 10px 20px !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-weight: 500 !important;
+            padding: 0 10px !important;
+            transition: color 0.3s ease !important;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                order: 1 !important;
+                text-align: left !important;
+            }
+
+            .navbar-brand {
+                order: -1;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: flex-start !important;
+            }
+
+            .navbar .navbar-brand img {
+                width: 100px !important;
+            }
+        }
+
+        .navbar .navbar-brand img {
+            width: 150px !important;
+            height: auto !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #1E90FF!important;
+        }
+
+        .confirmation-message {
+            display: none;
+            background-color: rgba(158, 173, 237, 1);
+            color: #011762;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+
+
+
+        
+footer {
+            background-color: #011762;
+            padding: 20px 0;
+            color: #a4a3a3;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: #a4a3a3;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1E90FF;
+        }
+
+        .social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    margin: 0 20px; /* إضافة مسافات بين الدوائر */
+}
+
+.social-icon .circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* لمحاذاة الدائرة في المنتصف */
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+
+        .social-icon:hover .circle {
+            background-color: #ffffff;
+            color: #011762;
+            transform: scale(1.1);
+        }
+
+        .social-icon span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #011762 !important; /* Dark blue on hover */
+            color: #ffffff !important; /* White text on hover */
+        }
+
+
+
+
+        
+        
+        @media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+        .navbar .navbar-brand img {
+            width: 100px; 
+            height: auto; 
+        }
+
+
+
+        .section-title {
+        font-size: 35px; /* Increase font size */
+        color: #011762 ; /* Set text color to blue */
+        transform: translateX(50px); /* تحريك العنوان 50px إلى اليمين */
+        
+  }
+
+
+  @media (max-width: 768px) {
+    .section-title {
+        text-align: center; /* توسيط العنوان */
+        transform: translateX(0); /* إزالة التحويل */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+.navbar .navbar-brand img {
+            width: 150px !important; 
+            height: auto !important; 
+        }
+
+
+        @media (max-width: 390px) {
+ 
+    .navbar .navbar-brand img {
+        width: 90px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .social-icon .circle {
+        width: 45px; /* تصغير الدائرة */
+        height: 45px;
+        font-size: 1.2rem; /* تصغير الأيقونة داخل الدائرة */
+    }
+
+    .social-icon span {
+        font-size: 0.9rem; /* تصغير النص تحت الأيقونة */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon .circle {
+        width: 40px; /* تصغير أكثر للشاشات الصغيرة جدًا */
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .social-icon span {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        gap: 8px; /* تقليل المسافة بين العناصر */
+    }
+}
+
+
+    </style>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("dxU28rWD26915IS-U");
+   })();
+</script>
+
+</script>
+<script src="scrt.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex justify-content-between">
+            <!-- الشعار على اليسار -->
+            <a class="navbar-brand order-lg-0 me-auto" href="#">
+                <img src="ieee-logo 1.png" alt="IEEE Logo">
+            </a>
+    
+            <!-- زر القائمة للشاشات الصغيرة -->
+            <button class="navbar-toggler order-lg-1" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- القائمة على اليمين -->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Up_Coming_Page.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutusa22.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="in_php.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<!-- Contact Form Section -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0" style="background-color: rgba(232, 234, 249, 255); border-radius: 20px;">
+                <div class="card-header text-center py-4" style="background: linear-gradient(to right, rgba(194, 202, 243, 1), rgba(158, 173, 237, 1)); border-radius: 20px 20px 0 0; color: #011762;">
+                    <h3 class="mb-0">Contact Us</h3>
+                    <p class="small mt-2">We would love to hear from you!</p>
+                </div>
+                <div class="card-body p-4">
+                    <form id="contactForm" onsubmit="sendMail(event)">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label" style="color: #011762;">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="e.g., Ahmed Khalid" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label" style="color: #011762;">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="e.g., name@example.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Subject Box -->
+                        <div class="mb-4">
+                            <label for="subject" class="form-label" style="color: #011762;">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="e.g., Inquiry about Events" required>
+                        </div>
+
+                        <!-- Message Box -->
+                        <div class="mb-4">
+                            <label for="message" class="form-label" style="color: #011762;">Your Inquiry</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your inquiry here..." required></textarea>
+                        </div>
+                          <div class="mb-4">
+                                <label for="category" class="form-label" style="color: #011762;">Select Category</label>
+                                <select class="form-select" id="category" name="category" required>
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option value="Website Committees">Website Committees</option>
+                                    <option value="Publicity Committees">Publicity Committees</option>
+                                    <option value="Program Committees">Program Committees</option>
+                                    <option value="Execution and Finance Committees">Execution and Finance Committees</option>
+                                    <option value="Nominations Committees">Nominations Committees</option>
+                                    <option value="Research Committee">Research Committee</option>
+                                </select>
+                            </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn py-2" style="background-color: rgba(158, 173, 237, 1); color: #011762; font-weight: bold; border: none;">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Confirmation Message -->
+                    <div class="confirmation-message" id="confirmationMessage">
+                        Thank you for your message! Your inquiry has been received and you will be replied to shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer Section -->
+  
+    <footer class="mt-5 text-center" style="background-color: #011762; padding: 30px;">
+        <div class="text-center">
+            <div class="my-3">
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+                <span style="color: rgba(255, 255, 255, 0.8); font-weight: bold;">OR</span>
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+            </div>
+            <h4 class="mb-3" style="color: #ffffff; ">Social Media</h4>
+            <div class="d-flex justify-content-center align-items-center gap-4">
+                <!-- LinkedIn Icon -->
+                <a href="https://sa.linkedin.com/company/ieeekau-sb-female?trk=public_profile_experience-item_profile-section-card_image-click" class="social-icon" target="_blank">
+                    <div class="circle">
+                        <i class="bi bi-linkedin"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                </a>
+                <!-- Twitter Icon -->
+                <a href="https://x.com/ieee_kau_sb" class="social-icon" target="_blank">
+                    <div class="circle">
+                        <i class="bi bi-x" style="font-size: 60px;"></i> <!-- تم تكبير الأيقونة -->
+                    </div>
+                    <span>X</span>
+                </a>
+  
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com/ieeeclubkau" class="social-icon" target="_blank">
+                    <div class="circle">
+                        <i class="bi bi-instagram"></i>
+                    </div>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+        <p class="mt-3 mb-0">&copy; 2025 IEEE KAU Female Branch. All rights reserved.</p>
+    </footer>
+  
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  
+  
+  </html>
+  

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IEEE - KAU Female Branch</title>
+ <!-- Font Awesome -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- CSS Swiper -->
+     <link rel="stylesheet" href="swiper-bundle.min.css">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            font-family: "Cairo", sans-serif; 
+            background-color: #011762;
+        }
+
+        .navbar {
+            background-color: #011762;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-brand img {
+            width: 150px; 
+            height: auto; 
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #1E90FF !important;
+        }
+
+        .btn-language {
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+
+        .btn-language.disabled {
+            color: #a4a3a3;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 70vh;
+        }
+
+        main .content {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            min-height: 400px;
+            background-color: #ECEFF5;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        
+       
+
+        .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+/*activities */
+
+    .activities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: left;
+  color: #0B173D;
+  margin-bottom: 0; 
+  padding-bottom: 0; 
+}
+
+
+.activity-card img {
+  width: 50%; 
+  height: 100%; 
+  border-radius: 100px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: #011762 dashed 3px;
+}
+
+.activity-card .content {
+  width: 50%;
+  padding: 10px;
+  min-height: 0; 
+  text-align: center;
+}
+
+.activity-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #011762;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.activity-card p {
+  font-size: 0.99rem;
+  margin-bottom: 15px;
+  color: #011762;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0B173D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.learn-more-btn:hover {
+  background-color: #394d87;
+}
+
+
+
+@media (max-width: 768px) {
+    .activity-card {
+    flex-direction: column-reverse;
+    gap: 0; 
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+
+  .activity-card img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-bottom: 0; 
+  }
+  .activity-card .content {
+    width: 100%;
+    padding: 5px;
+    margin: 0; 
+    min-height: auto; 
+  }
+
+    .activity-card.reverse {
+        flex-direction: column; 
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+  hr {
+    display: none;
+  }
+
+}
+
+        @media (max-width: 768px) {
+            .navbar .navbar-brand img {
+                width: 100px !important; 
+            }
+
+            .navbar .navbar-brand {
+                font-size: 14px;
+            }
+        }
+
+
+
+
+          /* About Us Section */
+          .about-us-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .about-us-text {
+            width: 75%; /* 75% for text */
+            color: #011762;
+            font-size: 1rem;
+        }
+
+        .about-us-text h1 {
+            font-size: 2.3rem;
+            font-weight: bold;
+        }
+
+        .about-us-image {
+            width: 25%; /* 25% for image */
+        }
+
+        .about-us-image img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* Members Section */
+        .members-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .member-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+            color: #0B173D;
+        }
+
+        .member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #011762;
+        }
+
+        .member-card .content {
+            text-align: center;
+        }
+
+        .member-card h3 {
+            font-size: 1.2rem;
+            color: #011762;
+            font-weight: 700;
+        }
+
+        .member-card p {
+            font-size: 0.9rem;
+            color: #011762;
+        }
+
+        @media (max-width: 768px) {
+            .about-us-section {
+                flex-direction: column;
+            }
+
+            .about-us-text,
+            .about-us-image {
+                width: 100%;
+            }
+
+            .about-us-text h1 {
+            font-size: 1.5rem !important;
+            font-weight: bold;
+        }
+            .member-card {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .member-card img {
+                margin-bottom: 10px;
+            }
+        }
+
+
+        /* Members Section */
+        .members img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* تأكيد أن الصفحة تأخذ كامل الارتفاع */
+}
+
+body {
+    background-color: #011762; /* الخلفية الزرقاء */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    min-height: 100vh; /* يضمن أن العنصر main يغطي كامل الشاشة */
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ECEFF5; /* الخلفية البيضاء */
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 0; /* عدم تجاوز الارتفاع */
+}
+
+@media (min-width: 992px) {
+    .about-us-image img {
+        width: 80%; /* جعل الصورة أصغر */
+        margin: auto; /* لمحاذاة الصورة بشكل جميل */
+    }
+
+    .about-us-text p {
+        font-size: 1.2rem; /* تكبير حجم النص */
+        line-height: 1.8; /* زيادة التباعد بين الأسطر لتحسين القراءة */
+    }
+}
+@media (min-width: 1200px) {
+    .members img {
+        width: 100%; /* تصغير الصورة أكثر للشاشات الكبيرة */
+    }}
+
+    @media (max-width: 660px) {
+    .about-us-image img {
+        width: 75%; /* جعل الصورة أصغر */
+        margin: 0 auto; /* لمحاذاة الصورة في المنتصف */
+        display: block; /* جعل الصورة عنصر كتلة ليتم محاذاتها بشكل صحيح */
+    }
+}
+    
+
+        @media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+      @media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+.navbar .navbar-brand img {
+            width: 150px !important; 
+            height: auto !important; 
+        }
+
+
+        @media (max-width: 390px) {
+ 
+    .navbar .navbar-brand img {
+        width: 90px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+
+
+
+
+
+
+
+
+        footer {
+            background-color: #011762;
+            padding: 20px 0;
+            color: #a4a3a3;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: #a4a3a3;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1E90FF;
+        }
+
+        .social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    margin: 0 20px; /* إضافة مسافات بين الدوائر */
+}
+
+.social-icon .circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* لمحاذاة الدائرة في المنتصف */
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+
+        .social-icon:hover .circle {
+            background-color: #ffffff;
+            color: #011762;
+            transform: scale(1.1);
+        }
+
+        .social-icon span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #011762 !important; /* Dark blue on hover */
+            color: #ffffff !important; /* White text on hover */
+        }
+  
+
+     
+        
+
+
+
+        @media (max-width: 768px) {
+    .social-icon .circle {
+        width: 45px; /* تصغير الدائرة */
+        height: 45px;
+        font-size: 1.2rem; /* تصغير الأيقونة داخل الدائرة */
+    }
+
+    .social-icon span {
+        font-size: 0.9rem; /* تصغير النص تحت الأيقونة */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon .circle {
+        width: 40px; /* تصغير أكثر للشاشات الصغيرة جدًا */
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .social-icon span {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="ieee-logo 1.png" alt="IEEE Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Up_Coming_Page.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="in_php.html">Contact</a></li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="content">
+            <!-- write  content code here ya -->
+            <div class="about-us-section">
+                <div class="about-us-text">
+                    <h1>About Us</h1>
+                    <p>IEEE Student Clubs are chapters of the IEEE Foundation and constitute part of the global IEEE network. It consists mainly of electrical, electronic, and computer engineering and science students. IEEE Student Clubs exist in universities and institutes around the world, and local branches of the clubs organize events, lectures, workshops, competitions, technical projects, social activities, and other activities aimed at achieving the goals of the IEEE Foundation.</p>
+                </div>
+                <div class="about-us-image">
+                    <div class="image-container">
+                        <img src="w.jpg" alt="IEEE Booth">
+                        <!-- Floating balloons -->
+                        <div class="balloon balloon-1"></div>
+                        <div class="balloon balloon-2"></div>
+                        <div class="balloon balloon-3"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                .about-us-section {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin-bottom: 40px;
+                    position: relative;
+                }
+            
+                .about-us-text {
+                    width: 60%; /* Reduced width */
+                    color: #011762;
+                    font-size: 1rem;
+                    position: relative;
+                    z-index: 2;
+                }
+            
+                .about-us-text h1 {
+                    font-size: 2.3rem;
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 2;
+                }
+            
+                .about-us-image {
+                    width: 40%; /* Reduced width */
+                    position: relative;
+                    z-index: 1;
+                    margin-top: 20px; /* Move the image a bit lower */
+                }
+            
+                .about-us-image .image-container {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    border: 3px solid #011762;
+                    transition: transform 0.5s ease, box-shadow 0.5s ease;
+                    width: 100%; /* Increased size of the image container */
+                    margin: auto;
+                }
+            
+                .about-us-image .image-container img {
+                    width: 100%; /* Increased image size */
+                    height: auto;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    transition: transform 0.5s ease-in-out;
+                }
+            
+                .about-us-image .image-container:hover img {
+                    transform: scale(1.05) rotate(2deg); /* 3D effect */
+                }
+            
+                .about-us-image .image-container:hover {
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                    transform: scale(1.05);
+                }
+            
+                /* Balloon-like floating circles */
+                .balloon {
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background-color: #011762;
+                    border-radius: 50%;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    animation: float 4s infinite ease-in-out;
+                }
+            
+                /* Different positions for each balloon */
+                .balloon-1 {
+                    top: 10px;
+                    left: 10px;
+                    animation-duration: 6s;
+                }
+            
+                .balloon-2 {
+                    top: -30px;
+                    right: 10px;
+                    animation-duration: 5s;
+                }
+            
+                .balloon-3 {
+                    bottom: 10px;
+                    left: 30px;
+                    animation-duration: 7s;
+                }
+            
+                /* Floating animation */
+                @keyframes float {
+                    0% {
+                        transform: translateY(0) scale(1);
+                    }
+                    50% {
+                        transform: translateY(-30px) scale(1.2);
+                    }
+                    100% {
+                        transform: translateY(0) scale(1);
+                    }
+                }
+            
+                @media (max-width: 768px) {
+                    .about-us-section {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 15px;
+                    }
+            
+                    .about-us-text, .about-us-image {
+                        width: 100%;
+                    }
+            
+                    .about-us-text h1 {
+                        font-size: 1.5rem !important;
+                    }
+                }
+            </style>
+            
+            
+
+            <!-- Members Section -->
+            <div class="members">
+                <div class="about-us-text">
+                <br>
+                <h1>The club's structure</h1>
+                <br>
+               </div>
+                <img src="mem1.png" alt="Members Image" class="img-fluid rounded">
+            </div>
+        </div>
+        </div>
+
+        <style>
+            /* CSS to make the image smaller on large screens */
+            .members img {
+                display: block;
+                margin: 0 auto; /* Center the image */
+                max-width: 100%; /* Make sure the image doesn't overflow */
+                width: 85%; /* Set the image width to 80% of its container */
+            }
+        
+            @media (min-width: 992px) { 
+                /* On large screens, reduce the image size further */
+                .members img {
+                    width: 60%; /* Adjust to 50% on large screens */
+                }
+            }
+        </style>
+
+        </div>
+    </main>
+
+
+  
+
+    <footer class="mt-5 text-center" style="background-color: #011762; padding: 30px;">
+      <div class="text-center">
+          <div class="my-3">
+              <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+              <span style="color: rgba(255, 255, 255, 0.8); font-weight: bold;">OR</span>
+              <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+          </div>
+          <h4 class="mb-3" style="color: #ffffff;">Social Media</h4>
+          <div class="d-flex justify-content-center align-items-center gap-4">
+              <!-- LinkedIn Icon -->
+              <a href="https://sa.linkedin.com/company/ieeekau-sb-female?trk=public_profile_experience-item_profile-section-card_image-click" class="social-icon" target="_blank">
+                  <div class="circle">
+                      <i class="bi bi-linkedin"></i>
+                  </div>
+                  <span>LinkedIn</span>
+              </a>
+              <!-- Twitter Icon -->
+              <a href="https://x.com/ieee_kau_sb" class="social-icon" target="_blank">
+                <div class="circle">
+                    <i class="bi bi-x" style="font-size: 60px;"></i> <!-- تم تكبير الأيقونة -->
+                </div>
+                <span>X</span>
+            </a>
+
+              <!-- Instagram Icon -->
+              <a href="https://www.instagram.com/ieeeclubkau" class="social-icon" target="_blank">
+                  <div class="circle">
+                      <i class="bi bi-instagram"></i>
+                  </div>
+                  <span>Instagram</span>
+              </a>
+          </div>
+      </div>
+      <p class="mt-3 mb-0">&copy; 2025 IEEE KAU Female Branch. All rights reserved.</p>
+  </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

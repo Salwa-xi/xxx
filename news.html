@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IEEE - KAU Female Branch</title>
+ <!-- Font Awesome -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- CSS Swiper -->
+     <link rel="stylesheet" href="swiper-bundle.min.css">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            font-family: "Cairo", sans-serif; 
+            background-color: #011762;
+        }
+
+        .navbar {
+            background-color: #011762;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-brand img {
+            width: 500px; 
+            height: auto; 
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #1E90FF !important;
+        }
+
+        .btn-language {
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+
+        .btn-language.disabled {
+            color: #a4a3a3;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 70vh;
+        }
+
+        main .content {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            min-height: 400px;
+            background-color: #ECEFF5;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        
+       
+
+        .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+/*activities */
+
+    .activities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: left;
+  color: #0B173D;
+  margin-bottom: 0; 
+  padding-bottom: 0; 
+}
+
+
+.activity-card img {
+  width: 50%; 
+  height: 100%; 
+  border-radius: 100px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: #011762 dashed 3px;
+}
+
+.activity-card .content {
+  width: 50%;
+  padding: 10px;
+  min-height: 0; 
+  text-align: center;
+}
+
+.activity-card h3 {
+  margin: 10px 0;
+  color: #011762;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.activity-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #011762;
+}
+
+
+
+.learn-more-btn:hover {
+  background-color: #394d87;
+}
+
+
+
+@media (max-width: 768px) {
+    .activity-card {
+    flex-direction: column-reverse;
+    gap: 0; 
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+
+  .activity-card img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-bottom: 0; 
+  }
+  .activity-card .content {
+    width: 100%;
+    padding: 5px;
+    margin: 0; 
+    min-height: auto; 
+  }
+
+    .activity-card.reverse {
+        flex-direction: column; 
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+  hr {
+    display: none;
+  }
+
+}
+
+        @media (max-width: 768px) {
+            .navbar .navbar-brand img {
+                width: 300px; 
+            }
+
+            .navbar .navbar-brand {
+                font-size: 14px;
+            }
+        }
+
+        
+
+footer {
+            background-color: #011762;
+            padding: 20px 0;
+            color: #a4a3a3;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: #a4a3a3;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1E90FF;
+        }
+
+        .social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    margin: 0 20px; /* إضافة مسافات بين الدوائر */
+}
+
+.social-icon .circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* لمحاذاة الدائرة في المنتصف */
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+
+        .social-icon:hover .circle {
+            background-color: #ffffff;
+            color: #011762;
+            transform: scale(1.1);
+        }
+
+        .social-icon span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #011762 !important; /* Dark blue on hover */
+            color: #ffffff !important; /* White text on hover */
+        }
+
+
+
+
+        
+        
+        @media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+        .navbar .navbar-brand img {
+            width: 100px; 
+            height: auto; 
+        }
+
+
+
+        .section-title {
+        font-size: 35px; /* Increase font size */
+        color: #011762 ; /* Set text color to blue */
+        transform: translateX(50px); /* تحريك العنوان 50px إلى اليمين */
+        
+  }
+
+
+  @media (max-width: 768px) {
+    .section-title {
+        text-align: center; /* توسيط العنوان */
+        transform: translateX(0); /* إزالة التحويل */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+.navbar .navbar-brand img {
+            width: 150px !important; 
+            height: auto !important; 
+        }
+
+
+        @media (max-width: 390px) {
+ 
+    .navbar .navbar-brand img {
+        width: 90px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .social-icon .circle {
+        width: 45px; /* تصغير الدائرة */
+        height: 45px;
+        font-size: 1.2rem; /* تصغير الأيقونة داخل الدائرة */
+    }
+
+    .social-icon span {
+        font-size: 0.9rem; /* تصغير النص تحت الأيقونة */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon .circle {
+        width: 40px; /* تصغير أكثر للشاشات الصغيرة جدًا */
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .social-icon span {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="ieee-logo 1.png" alt="IEEE Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Up_Coming_Page.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutusa22.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="in_php.html">Contact</a></li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content">
+            <!-- Announcements Section -->
+            <section class="announcements">
+                <h2 class="section-title">Latest Announcements</h2>
+                <div class="announcements-container">
+                    <!-- Announcement 1 -->
+                    <div class="announcement-card">
+                        <img src="redd.jpg" alt="Announcement 1">
+                        <div class="announcement-content">
+                            <h3>Join us for the upcoming IEEE Club Workshops</h3>
+                            <p>Get all the details and stay updated on our social media platforms. Don't miss out</p>
+                        </div>
+                    </div>
+                    <!-- Announcement 2 -->
+                    <div class="announcement-card">
+                        <img src="hhhhh.jpg" alt="Announcement 2">
+                        <div class="announcement-content">
+                            <h3>Something incredible is coming your way...</h3>
+                            <p>Stay with us, follow our accounts, and get ready for what’s next</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <br>
+            <!-- Upcoming News Section -->
+            <section class="upcoming-news">
+                <h3 class="section-title">Upcoming</h3>
+                <div class="upcoming-news-container">
+                    <!-- Event 1 -->
+                    <div class="upcoming-news-item">
+                        <i class="bi bi-calendar-event"></i> <span>Workshops Await</span>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="upcoming-news-item">
+                        <i class="bi bi-calendar-event"></i> <span>Engaging Activity</span>
+                    </div>
+                    <!-- Event 3 -->
+                    <div class="upcoming-news-item">
+                        <i class="bi bi-calendar-event"></i> <span>Special Occasion</span>
+                    </div>
+                     <!-- Event 4 -->
+                     <div class="upcoming-news-item">
+                        <i class="bi bi-calendar-event"></i> <span>Annual Celebration </span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- CSS for styling -->
+    <style>
+        .announcements-container {
+            display: flex;
+            gap: 20px;
+        }
+    
+        .announcement-card {
+            display: flex;
+            width: 48%;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .announcement-card img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
+    
+        .announcement-content {
+    padding: 15px;
+    width: 50%;
+    text-align: center; /* Center the text horizontally */
+    margin-top: 90px; /* Adjust this value to move the text lower */
+}
+
+.announcement-content h3 {
+    color: #011762;
+    font-size: 1.2rem;    
+    font-weight: bold;
+}
+
+.announcement-content p {
+    color: #555;
+    font-size: 1rem;
+}
+
+    
+        .upcoming-news-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .upcoming-news-item {
+            display: flex;
+            align-items: center;
+            color: #aaa;
+        }
+    
+        .upcoming-news-item i {
+            margin-right: 10px;
+        }
+    
+        .upcoming-news-item span {
+            font-size: 1rem;
+        }
+
+
+
+        /* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .announcement-card {
+        width: 100%; /* Stack the cards vertically on small screens */
+        flex-direction: column; /* Stack the image and content vertically */
+    }
+
+    .announcement-card img {
+        width: 100%; /* Make the image take up full width on small screens */
+        height: auto;
+        object-fit: cover; /* Ensure the image maintains aspect ratio */
+        max-height: none; /* Remove max-height to allow full image display */
+    }
+
+    .announcement-content {
+        margin-top: 20px; /* Adjust the top margin for smaller screens */
+        width: 100%; /* Make content take full width */
+    }
+
+    .announcements-container {
+        flex-direction: column; /* Stack the announcements vertically on small screens */
+    }
+
+    .section-title {
+        font-size: 1.4rem; /* Reduce the section title font size for small screens */
+    }
+}
+
+    </style>
+    
+  
+
+    <footer class="mt-5 text-center" style="background-color: #011762; padding: 30px;">
+      <div class="text-center">
+          <div class="my-3">
+              <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+              <span style="color: rgba(255, 255, 255, 0.8); font-weight: bold;">OR</span>
+              <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+          </div>
+          <h4 class="mb-3" style="color: #ffffff; ">Social Media</h4>
+          <div class="d-flex justify-content-center align-items-center gap-4">
+              <!-- LinkedIn Icon -->
+              <a href="https://sa.linkedin.com/company/ieeekau-sb-female?trk=public_profile_experience-item_profile-section-card_image-click" class="social-icon" target="_blank">
+                  <div class="circle">
+                      <i class="bi bi-linkedin"></i>
+                  </div>
+                  <span>LinkedIn</span>
+              </a>
+              <!-- Twitter Icon -->
+              <a href="https://x.com/ieee_kau_sb" class="social-icon" target="_blank">
+                <div class="circle">
+                    <i class="bi bi-x" style="font-size: 60px;"></i> <!-- تم تكبير الأيقونة -->
+                </div>
+                <span>X</span>
+            </a>
+
+              <!-- Instagram Icon -->
+              <a href="https://www.instagram.com/ieeeclubkau" class="social-icon" target="_blank">
+                  <div class="circle">
+                      <i class="bi bi-instagram"></i>
+                  </div>
+                  <span>Instagram</span>
+              </a>
+          </div>
+      </div>
+      <p class="mt-3 mb-0">&copy; 2025 IEEE KAU Female Branch. All rights reserved.</p>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

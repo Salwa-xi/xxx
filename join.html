@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IEEE - KAU Female Branch</title>
+
+    <!-- CSS Swiper -->  <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+     <link rel="stylesheet" href="swiper-bundle.min.css">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo" />
+    <link rel="stylesheet" href="style.css">
+      
+
+    <style>
+      body, .navbar, main, .centered-section, .banner-section, .content-section {
+    margin: 0; /* إزالة المسافة بين السكشنات */
+    padding: 0; /* إزالة المسافة الداخلية بين السكشنات */
+}
+
+        body {
+            font-family: "Cairo", sans-serif; 
+            background-color: #011762;
+        }
+
+        .navbar {
+            background-color: #011762;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .navbar-brand img {
+            width: 500px; 
+            height: auto; 
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #1E90FF !important;
+        }
+
+        .btn-language {
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+
+        .btn-language.disabled {
+            color: #a4a3a3;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 70vh;
+        }
+
+        main .content {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            min-height: 400px;
+            background-color: #ECEFF5;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        
+       
+
+        .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+/*activities */
+
+    .activities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: left;
+  color: #0B173D;
+  margin-bottom: 0; 
+  padding-bottom: 0; 
+}
+
+
+.activity-card img {
+  width: 50%; 
+  height: 100%; 
+  border-radius: 100px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: #011762 dashed 3px;
+}
+
+.activity-card .content {
+  width: 50%;
+  padding: 10px;
+  min-height: 0; 
+  text-align: center;
+}
+
+.activity-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #011762;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.activity-card p {
+  font-size: 0.99rem;
+  margin-bottom: 15px;
+  color: #011762;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0B173D;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.learn-more-btn:hover {
+  background-color: #394d87;
+}
+
+
+
+@media (max-width: 768px) {
+    .activity-card {
+    flex-direction: column-reverse;
+    gap: 0; 
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+
+  .activity-card img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-bottom: 0; 
+  }
+  .activity-card .content {
+    width: 100%;
+    padding: 5px;
+    margin: 0; 
+    min-height: auto; 
+  }
+
+    .activity-card.reverse {
+        flex-direction: column; 
+    }
+}
+
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #0B173D;
+  width: 100%; 
+  margin: 20px auto;
+  border-radius: 3px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  hr {
+    display: none;
+  }
+
+}
+
+        @media (max-width: 768px) {
+            .navbar .navbar-brand img {
+                width: 100px; 
+            }
+
+            .navbar .navbar-brand {
+                font-size: 14px;
+            }
+        }
+
+
+
+
+        .responsive-video {
+    width: 100%;
+    height: 100px; /* ارتفاع افتراضي */
+    border-radius: 20px;
+    object-fit: cover;
+    outline: none;
+}
+
+/* شاشات الجوال: عرض أقل من 768px */
+@media (max-width: 768px) {
+    .responsive-video {
+        height: 100px; /* تقليل الارتفاع للجوال */
+    }
+}
+
+/* شاشات صغيرة جدًا: عرض أقل من 480px */
+@media (max-width: 480px) {
+    .responsive-video {
+        height: 50px; /* تقليل الارتفاع أكثر */
+    }
+}
+
+
+
+
+
+          /* تصميم الفيديو */
+          .video-container {
+              position: relative;
+              width: 100%;
+              height: 300px; /* الارتفاع الافتراضي */
+              border-radius: 20px;
+              overflow: hidden; /* لمنع أي عناصر تخرج عن الفيديو */
+          }
+          
+          .responsive-video {
+              width: 100%;
+              height: 100%; /* يملأ كامل الحاوية */
+              object-fit: cover; /* لضمان تغطية الفيديو */
+          }
+          
+          /* طبقة النص فوق الفيديو */
+          .video-overlay {
+              position: absolute;
+              top: 80%;
+              left:25%;
+              transform: translate(-50%, -50%); /* لمركزة النص */
+              color: white; /* لون النص */
+              text-align: center; /* محاذاة النص */
+              z-index: 2; /* جعل النص فوق الفيديو */
+          }
+          
+          .video-title {
+              font-size: 3.5rem; /* حجم العنوان */
+              font-weight: bold;
+              margin: 0;
+              color: #031e77; /* اللون الأزرق */
+          }
+          
+          .video-subtitle {
+              font-size: 1.2rem; /* حجم النص الثانوي */
+              margin: 10px 0 0;
+              color: white; /* النص الثانوي يبقى أبيض */
+          }
+          
+          /* الشاشات الصغيرة */
+          @media (max-width: 768px) {
+              .video-container {
+                  height: 200px; /* تصغير ارتفاع الفيديو */
+                  
+              }
+              .video-title {
+                  font-size: 1.9rem; /* تصغير حجم العنوان */
+              }
+              .video-subtitle {
+                  font-size: 0.7rem; /* تصغير حجم النص الثانوي */
+              }
+              .video-overlay {
+              top: 85%;
+              left:35%;}
+          }
+          
+          @media (max-width: 480px) {
+              .video-container {
+                  height: 150px; /* تصغير أكبر للجوال */
+              }
+              .video-title {
+                  font-size: 1.5rem; /* حجم العنوان للجوال */
+              }
+              .video-subtitle {
+                  font-size: 0.64rem; /* حجم النص الثانوي للجوال */
+              }
+              .video-overlay {
+              top: 85%;
+              left:35%;}
+          }
+            
+          @media (max-width: 320px) {
+              .video-container {
+                  height: 150px; /* تصغير أكبر للجوال */
+              }
+              .video-title {
+                  font-size: 1.2rem; /* حجم العنوان للجوال */
+              }
+              .video-subtitle {
+                  font-size: 0.2rem; /* حجم النص الثانوي للجوال */
+              }
+              .video-overlay {
+              top: 50%;
+              left:50%;}
+          }
+
+
+
+
+
+/* سكشن مركزي */
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* لمحاذاة العنوان بالنصف */
+    padding: 40px 20px;
+    background-color: #ECEFF5;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* عرض محدد للسكشن */
+}
+
+.section-title {
+    font-size: 2.6rem;
+    color: #011762; /* لون العنوان */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.section-paragraph {
+    font-size: 1rem;
+    color: #0B173D; /* لون الفقرة */
+    line-height: 2.3; /* تحسين التباعد بين الأسطر */
+    text-align: justify; /* محاذاة النص بشكل مربع */
+    text-justify: inter-word; /* توزيع الكلمات لملء السطور */
+    padding: 0 10px; /* مسافة داخلية على الجوانب */
+}
+
+/* تحسين العرض للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .centered-section {
+        padding: 20px 15px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-paragraph {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+footer {
+            background-color: #011762;
+            padding: 20px 0;
+            color: #a4a3a3;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: #a4a3a3;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #1E90FF;
+        }
+
+        .social-icon {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    margin: 0 20px; /* إضافة مسافات بين الدوائر */
+}
+
+.social-icon .circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* لمحاذاة الدائرة في المنتصف */
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+
+        .social-icon:hover .circle {
+            background-color: #ffffff;
+            color: #011762;
+            transform: scale(1.1);
+        }
+
+        .social-icon span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #011762 !important; /* Dark blue on hover */
+            color: #ffffff !important; /* White text on hover */
+        }
+
+
+
+
+
+
+
+        
+        @media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+        .navbar .navbar-brand img {
+            width: 200px; 
+            height: auto; 
+        }
+
+
+        @media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+        margin-left: 20px; /* إضافة مسافة من اليسار */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        order: 1; /* جعل القائمة المنسدلة تظهر أولاً */
+        text-align: left; /* تأكد من محاذاة القائمة يساراً */
+    }
+
+    .navbar-brand {
+        order: -1; /* جعل اللوجو يظهر أولاً */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+.navbar .navbar-brand img {
+            width: 150px !important; 
+            height: auto !important; 
+        }
+
+
+        @media (max-width: 390px) {
+ 
+    .navbar .navbar-brand img {
+        width: 90px !important; /* تكبير حجم اللوغو في الشاشات الصغيرة */
+    }
+}
+
+
+
+
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="ieee-logo 1.png" alt="IEEE Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Up_Coming_Page.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutusa22.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Join Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="in_php.html">Contact</a></li>
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="content">
+            <!-- write  content code here ya -->
+            <div class="video-container">
+              <video class="responsive-video" autoplay muted loop>
+                  <source src="banner1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-overlay">
+                  <h1 class="video-title"> Join to IEEE</h1>
+                  <p class="video-subtitle">Empowering innovation and technology for a better tomorrow</p>
+              </div>
+          </div>
+          <section class="centered-section">
+            <h2 class="section-title">Why IEEE Club?</h2>
+            <p class="section-paragraph">
+              University life is not just about studying, but also gaining experiences. By joining our student club committees,
+               you can showcase and develop skills in areas like social media, planning, and web design. 
+               You’ll gain experience by working with the team, exchanging ideas, and benefiting from our educational 
+               resources and activities. Working within a global organization's committee adds significant value to your CV.
+            </p>
+        </section>
+ <!-- سكشن البنر -->
+<section class="banner-section">
+  <img src="banner2.png" alt="Banner Image" class="banner-image">
+</section>
+
+<style>
+/* سكشن البنر */
+.banner-section {
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden; /* لمنع أي تجاوز للصورة */
+  border-radius: 20px; /* حواف دائرية للبنر */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تعديل حجم الصورة لتصبح بنر */
+.banner-image {
+  width: 100%;
+  height: 320px; /* تحديد ارتفاع مناسب ليكون بنر */
+  object-fit: cover; /* لضمان تغطية الصورة بالكامل */
+  border-radius: 20px; /* نفس الحواف الدائرية */
+}
+
+/* استجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .banner-image {
+    height: 200px; /* تقليل الارتفاع على الشاشات الصغيرة */
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-image {
+    height: 150px; /* تقليل الارتفاع أكثر على الشاشات الصغيرة جدا */
+  }
+}
+
+@media (max-width: 320px) {
+  .banner-image {
+    height: 120px; /* تقليل الارتفاع للأجهزة ذات العرض 320px */
+  }
+}
+</style>
+
+
+
+<!-- سكشن العنوان والنص مع الزر -->
+<section class="content-section">
+  <div class="content-container">
+    <h2 class="section-title">How to Join Us</h2>
+    <p class="section-text">Club memberships are currently closed. New membership opportunities will be announced soon.</p>
+      <p><span class="stayTuned"> Stay tuned!</span></p>
+
+    <a href="#" class="btn-learn-more">Joining is currently closed</a>
+  </div>
+</section>
+
+<style>
+  /* تنسيق الـspan لجعله بولد */
+.stayTuned {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #011762;
+}
+/* سكشن العنوان والنص */
+.content-section {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ECEFF5; /* خلفية خفيفة */
+}
+
+.content-container {
+  text-align: center; /* محاذاة النصوص في المنتصف */
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #011762;
+}
+
+.section-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #011762;
+}
+
+.btn-learn-more {
+  padding: 10px 20px;
+  background-color: #0B173D;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-learn-more:hover {
+  background-color: #394d87;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-learn-more {
+  padding: 10px 20px;
+  background-color: #0B173D;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+}
+
+
+@media (max-width: 320px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-text {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .social-icon .circle {
+        width: 45px; /* تصغير الدائرة */
+        height: 45px;
+        font-size: 1.2rem; /* تصغير الأيقونة داخل الدائرة */
+    }
+
+    .social-icon span {
+        font-size: 0.9rem; /* تصغير النص تحت الأيقونة */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon .circle {
+        width: 40px; /* تصغير أكثر للشاشات الصغيرة جدًا */
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .social-icon span {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+        </div>
+    </main>
+
+
+  
+
+    <footer class="mt-5 text-center" style="background-color: #011762; padding: 30px;">
+      <div class="text-center">
+          <div class="my-3">
+              <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+              <span style="color: rgba(255, 255, 255, 0.8); font-weight: bold;">OR</span>
+              <hr style="border: 1px solid rgba(255, 255, 255, 0.5); width: 40%; display: inline-block;">
+          </div>
+          <h4 class="mb-3" style="color: #ffffff; ">Social Media</h4>
+          <div class="d-flex justify-content-center align-items-center gap-4">
+              <!-- LinkedIn Icon -->
+              <a href="https://sa.linkedin.com/company/ieeekau-sb-female?trk=public_profile_experience-item_profile-section-card_image-click" class="social-icon" target="_blank">
+                  <div class="circle">
+                      <i class="bi bi-linkedin"></i>
+                  </div>
+                  <span>LinkedIn</span>
+              </a>
+              <!-- Twitter Icon -->
+              <a href="https://x.com/ieee_kau_sb" class="social-icon" target="_blank">
+                <div class="circle">
+                    <i class="bi bi-x" style="font-size: 60px;"></i> <!-- تم تكبير الأيقونة -->
+                </div>
+                <span>X</span>
+            </a>
+
+              <!-- Instagram Icon -->
+              <a href="https://www.instagram.com/ieeeclubkau" class="social-icon" target="_blank">
+                  <div class="circle">
+                      <i class="bi bi-instagram"></i>
+                  </div>
+                  <span>Instagram</span>
+              </a>
+          </div>
+      </div>
+      <p class="mt-3 mb-0">&copy; 2025 IEEE KAU Female Branch. All rights reserved.</p>
+  </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
